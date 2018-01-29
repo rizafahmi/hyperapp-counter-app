@@ -1,17 +1,10 @@
-import { app } from 'hyperapp';
-import actions from './actions';
-import state from './state';
-import view from './components/Counter';
+import { app } from 'hyperapp'
 
-const {
-  add,
-  sub,
-} = app(
-  state,
-  actions,
-  view,
-  document.body,
-);
+import actions from './actions'
+import state from './state'
+import view from './components/Quotes'
+
+const { add, sub } = app(state, actions, view, document.body)
 
 /**
  * Hyperapp wires your actions so the view is re-rendered every time the state
@@ -21,5 +14,5 @@ const {
  * Here is an example on CodePen: https://codepen.io/selfup/pen/jLMRjO
  */
 
-setTimeout(add, 1000);
-setTimeout(sub, 2000);
+setTimeout(add, 1000)
+setTimeout(sub, 2000)
